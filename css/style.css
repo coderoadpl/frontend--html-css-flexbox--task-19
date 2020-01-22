@@ -1,0 +1,57 @@
+/* SPECIFICITY OF SELECTORS */
+
+/* A - number of ID selectors */
+/* B - number of class, attributes, pseudo-classes selectors */
+/* C - number of tags, pseudo-elements */
+
+/*  * selector does not count */
+
+/* Latests win if no winner by specificity */
+
+/* 0-0-1 */
+p{
+    color: greenyellow;
+}
+
+/* 0-0-1 */
+p{
+    color: green;
+}
+
+/* 1-0-0 */
+#first{
+    color: yellow;
+}
+
+/* 0-1-0 */
+.paragraph{
+    color: brown;
+}
+
+/* 1-1-0 */
+#first.paragraph{
+    color: black;
+}
+
+/* 1-1-1 */
+p#first.paragraph{
+    color: grey;
+}
+
+/* 0-0-1 */
+p{
+    color: pink !important;
+}
+
+/* 0-1-1 */
+p.paragraph{
+    color: darkblue !important;
+}
+
+body {
+    color: blueviolet;
+}
+
+div{
+    color: coral;
+}
